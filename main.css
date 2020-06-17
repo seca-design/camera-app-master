@@ -1,0 +1,54 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+}
+
+#camera {
+    position: fixed;
+    width: 375px;
+    height: 812px;
+}
+
+.camera--layer {
+    position: absolute;
+    left: 0%;
+    top: 18%;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+#camera__video {
+    object-fit: cover;
+    z-index: 1;
+}
+
+#camera__canvas {
+    z-index: 2;
+}
+
+#camera__output {
+    z-index: 3;
+}
+
+#camera__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+#camera__trigger {
+    position: absolute;
+    left: calc(50% - 40px);
+    bottom: 48px;
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+    z-index: 200;
+}
